@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie browser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<header>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="input-group">
+            <span class="input-group-addon" title="Posortuj filmy alfabetycznie" id="sort"><i class="fa fa-sort-alpha-asc" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" placeholder="Znajdź film..." id="input">
+              <span class="input-group-btn">
+                <button class="btn btn-default" id="btn-search" type="button">Szukaj!</button>
+              </span>
+
+        </div>
+
+    </div>
+</header>
+
+<section id="movies">
+    <div class="container">
+        <div class="row movie-container">
+
+        </div>
+    </div>
+</section>
+
+
+<section id="sidebar">
+    <h2 class="sidebar-title"></h2>
+    <img class="sidebar-poster" />
+    <p class="sidebar-description"></p>
+    <p class="sidebar-category"></p>
+    <p class="sidebar-companies"></p>
+    <p class="sidebar-countries"></p>
+    <p class="sidebar-imbd-container"><span>Zobacz więcej na </span><a class="sidebar-imbd" href=""><img src="img/imbd.png" /></a></p>
+
+
+
+
+</section>
+
+
+
+<footer>
+    <span>
+        Wszelkie informacje o filmach wraz z plakatami pochodzą z serwisu
+        <a href="https://www.themoviedb.org/">TMDb</a>
+    </span>
+    <a href="https://www.themoviedb.org/"><img src="img/logo.png" /></a>
+</footer>
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="script/main.js"></script>
+</body>
+</html>

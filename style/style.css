@@ -1,0 +1,268 @@
+/* light #01d277 */
+/* dark #081c24  */
+.navbar-fixed-top {
+    height: 80px;
+    background-color: #081c24;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    box-shadow: 0 3px 3px #868686;
+}
+
+.navbar-fixed-top>.input-group{
+    max-width: 500px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input[type=button],button, .input-group-addon{
+    background-color: #01d277 !important;
+    color: #081c24 !important;
+    border: none;
+}
+
+.input-group-addon:hover{
+    cursor: pointer;
+}
+
+.input-group{
+    border: none;
+}
+
+section[id=movies]{
+    min-height: calc(100vh - 50px);
+    padding-top: 100px;
+    background-color: white;
+}
+
+
+
+footer{
+    min-height: 50px;
+    background-color: #081c24;
+    width: 100%;
+    border: none;
+    text-align: center;
+    color: #01d277;
+}
+footer>span{
+    margin: 5px;
+    font-size: 10px;
+}
+
+footer>span, footer>a{
+    display: inline-block;
+}
+footer>span>a{
+    font-weight: 900;
+    color: #01d277;
+}
+
+footer>a>img{
+    height: 40px;
+    width: auto;
+    margin: 5px;
+}
+
+
+.movie{
+    margin: 30px;
+    min-height: 250px;
+    margin-top: 50px;
+}
+
+
+
+.movie-title{
+    border-bottom: solid #01d277 6px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    width: auto;
+}
+
+.movie-poster{
+    float: left;
+    height: 140px;
+    width: auto;
+    box-shadow: 3px 3px 1px #888888;
+}
+
+.movie-description{
+    float: left;
+    margin-left: 10px;
+    min-height: 140px;
+
+}
+
+.movie-average{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin: 0 5px 5px 5px;
+    box-shadow: 3px 3px 1px #888888;
+}
+
+
+.movie-average>p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+
+.movie-count{
+    height: 60px;
+    padding-top: 25px;
+    padding-left: 5px;
+    font-size: 13px;
+    float: left;
+}
+
+.high-mark{
+    background-color: green;
+    color: white;
+}
+.medium-mark{
+    background-color: yellow;
+}
+.low-mark{
+    background-color: red;
+    color: white;
+}
+
+
+.movie-popularity{
+    margin-top: 80px;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.movie-popularity>strong>i{
+    color: #ff7909;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.movie-date{
+    display: block;
+    float: none;
+    font-size: 12px;
+    margin-left: 10px;
+
+}
+.movie-btn{
+    display: block;
+    margin-top: 160px;
+    width: 300px;
+    box-shadow: 0 3px 3px #868686;
+}
+
+
+
+
+section[id=sidebar]{
+    box-sizing: border-box;
+    position: fixed;
+    min-height: 100vh;
+    background-color: #01d277;
+    color: #081c24;
+    top: 0;
+    right: 0;
+    width: 0;
+    overflow: scroll;
+    margin-top: 80px;
+    padding-bottom: 200px;
+    padding-top: 50px;
+    height: 100%;
+}
+section[id=sidebar]>*{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.sidebar-title{
+    border-bottom: solid #081c24 3px;
+    font-weight: 900;
+}
+.sidebar-description{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: solid #081c24 3px;
+    border-top: solid #081c24 3px;
+    text-align: justify;
+}
+
+.sidebar-poster{
+    width: 300px;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+}
+.sidebar-companies, .sidebar-countries, .sidebar-category{
+    padding: 10px;
+    border-bottom: solid #081c24 3px;
+}
+.sidebar-imbd>img{
+    height: 60px;
+}
+
+.sidebar-imbd-container{
+    padding: 10px;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .movie-poster{
+        display: block;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .movie{
+        min-height: 350px;
+        text-align: center;
+    }
+
+    .movie-average, .movie-popularity, .movie-date, .movie-count, .movie-description{
+        margin-top: 0;
+        float: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .movie-average,.movie-count{
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .movie-count{
+        margin-left: 5px;
+        position: relative;
+        top: -30px;
+    }
+    .movie-popularity{
+        position: relative;
+        top: -20px;
+    }
+    .movie-btn{
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 120px;
+    }
+
+
+}
