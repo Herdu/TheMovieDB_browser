@@ -12,7 +12,7 @@ var animationSpeed = 500; //ms
 
 
 searchURL =
-    "http://api.themoviedb.org/3" +
+    "https://api.themoviedb.org/3" +
     "/search/movie"+
     "?api_key=9f85caf9509b78649e71794938765dcf"+
     "&language=pl"+
@@ -86,7 +86,7 @@ var displayMoreInfo = function(movie){
 
 
 
-    $('.sidebar-imbd').attr("href", "http://www.imdb.com/title/"+movie.imdb_id+"/");
+    $('.sidebar-imbd').attr("href", "https://www.imdb.com/title/"+movie.imdb_id+"/");
 
     var companies = movie.production_companies;
 
