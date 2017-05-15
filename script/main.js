@@ -152,9 +152,6 @@ var displayMoreInfo = function(movie){
 
 var hideSideBar = function(){
 
-
-    clearSideBar();
-
     $('#movies').unbind().removeClass("shadow");
     $( "#sidebar" ).stop().animate({
         width: "0",
@@ -165,6 +162,7 @@ var hideSideBar = function(){
 
 
 var displaySideBar = function(data){
+    clearSideBar();
     displayMoreInfo(data);
     $('#movies').addClass("shadow");
 
