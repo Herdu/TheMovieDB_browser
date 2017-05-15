@@ -41,11 +41,7 @@ var sortMovies = function(){
 
 var displayMoreInfo = function(movie){
 
-    $('.sidebar-description').css("display","block");
-    $('.sidebar-category').css("display","block");
-    $('.sidebar-imbd-container').css("display","block");
-    $('.sidebar-companies').css("display","block");
-    $('.sidebar-countries').css("display","block");
+
 
 
     if (movie.poster_path != null)
@@ -133,6 +129,11 @@ var displayMoreInfo = function(movie){
         $('.sidebar-countries').html("<strong class='sidebar-header'>"+str+" powstania: </strong>"+countriesString);
     }
 
+    $('.sidebar-description').css("display","block");
+    $('.sidebar-category').css("display","block");
+    $('.sidebar-imbd-container').css("display","block");
+    $('.sidebar-companies').css("display","block");
+    $('.sidebar-countries').css("display","block");
 
 };
 

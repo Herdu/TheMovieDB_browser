@@ -39,11 +39,6 @@ section[id=movies]{
     padding-top: 100px;
     position: relative;
     rgba(0, 0, 0, 0);
-
-    -webkit-transition: background 1000ms ease-in-out 1s;
-    -moz-transition: background 1000ms ease-out 1s;
-    -o-transition: background 1000ms ease-out 1s;
-    transition: background 1000ms ease-out 1s;
 }
 
 .shadow::after{
@@ -53,11 +48,6 @@ section[id=movies]{
      content: "";
     top: 0; left: 0; right: 0; bottom: 0;
      background: rgba(0, 0, 0, 0.5);
-
-    -webkit-transition: background 1000ms ease-in-out 1s;
-    -moz-transition: background 1000ms ease-out 1s;
-    -o-transition: background 1000ms ease-out 1s;
-    transition: background 1000ms ease-out 1s;
  }
 .shadow:hover{
     cursor: pointer;
