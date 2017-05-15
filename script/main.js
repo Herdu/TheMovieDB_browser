@@ -97,9 +97,9 @@ var displayMoreInfo = function(movie){
                 companiesString +=", ";
         }
 
-        var str = "Wytwórnia";
+        var str = "wytwórnia";
         if(companies.length > 1)
-            str="Wytwórnie";
+            str="wytwórnie";
 
         $('.sidebar-companies').html("<strong class='sidebar-header'>"+str+": </strong>"+companiesString);
     }
