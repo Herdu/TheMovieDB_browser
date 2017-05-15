@@ -36,7 +36,16 @@ var sortMovies = function(){
     $('.movie-btn').on("click",moreInfo);
 };
 
+var clearSideBar = function(){
+    $('.sidebar-poster').attr("src", "");
 
+    $('.sidebar-description').css("display","none");
+    $('.sidebar-category').css("display","none");
+    $('.sidebar-imbd-container').css("display","none");
+    $('.sidebar-companies').css("display","none");
+    $('.sidebar-countries').css("display","none");
+
+}
 
 
 var displayMoreInfo = function(movie){
@@ -144,7 +153,7 @@ var displayMoreInfo = function(movie){
 var hideSideBar = function(){
 
 
-    $('.sidebar-poster').attr("src", "");
+    clearSideBar();
 
     $('#movies').unbind().removeClass("shadow");
     $( "#sidebar" ).stop().animate({
