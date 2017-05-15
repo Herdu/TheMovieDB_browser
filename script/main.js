@@ -76,7 +76,7 @@ var displayMoreInfo = function(movie){
             if (i!= movie.genres.length-1)
                 category+=", ";
         }
-        $('.sidebar-category').html("<strong>gatunek: </strong>"+category);
+        $('.sidebar-category').html("<strong class='sidebar-header'>gatunek: </strong>"+category);
     }
 
 
@@ -101,7 +101,7 @@ var displayMoreInfo = function(movie){
         if(companies.length > 1)
             str="Wytwórnie";
 
-        $('.sidebar-companies').html("<strong>"+str+": </strong>"+companiesString);
+        $('.sidebar-companies').html("<strong class='sidebar-header'>"+str+": </strong>"+companiesString);
     }
 
 
@@ -130,7 +130,7 @@ var displayMoreInfo = function(movie){
         if(countries.length > 1)
             str="kraje";
 
-        $('.sidebar-countries').html("<strong>"+str+" powstania: </strong>"+countriesString);
+        $('.sidebar-countries').html("<strong class='sidebar-header'>"+str+" powstania: </strong>"+countriesString);
     }
 
 
@@ -142,9 +142,8 @@ var displayMoreInfo = function(movie){
 
 var hideSideBar = function(){
 
-    $('#movies').unbind();
-
-    $( "#sidebar" ).animate({
+    $('#movies').unbind().removeClass("shadow");
+    $( "#sidebar" ).stop().animate({
         width: "0",
     }, animationSpeed, function() {
         // Animation complete.
@@ -154,7 +153,9 @@ var hideSideBar = function(){
 
 var displaySideBar = function(data){
     displayMoreInfo(data);
-    $( "#sidebar" ).animate({
+    $('#movies').addClass("shadow");
+
+    $( "#sidebar" ).stop().animate({
         width: "90%",
     }, animationSpeed, function() {
         $('#movies').on("click",hideSideBar);

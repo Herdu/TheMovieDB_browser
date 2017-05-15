@@ -37,9 +37,28 @@
 section[id=movies]{
     min-height: calc(100vh - 50px);
     padding-top: 100px;
-    background-color: white;
+    position: relative;
+    rgba(0, 0, 0, 0);
+
+    -webkit-transition: background 1000ms ease-in-out 1s;
+    -moz-transition: background 1000ms ease-out 1s;
+    -o-transition: background 1000ms ease-out 1s;
+    transition: background 1000ms ease-out 1s;
 }
 
+.shadow::after{
+     position: absolute;
+     width: auto;
+     height: auto;
+     content: "";
+    top: 0; left: 0; right: 0; bottom: 0;
+     background: rgba(0, 0, 0, 0.5);
+
+    -webkit-transition: background 1000ms ease-in-out 1s;
+    -moz-transition: background 1000ms ease-out 1s;
+    -o-transition: background 1000ms ease-out 1s;
+    transition: background 1000ms ease-out 1s;
+ }
 
 
 footer{
@@ -177,7 +196,7 @@ section[id=sidebar]{
     box-sizing: border-box;
     position: fixed;
     min-height: 100vh;
-    background-color: #01d277;
+    background-color: white;
     color: #081c24;
     top: 0;
     right: 0;
@@ -187,19 +206,30 @@ section[id=sidebar]{
     padding-bottom: 200px;
     padding-top: 50px;
     height: 100%;
+    border-left: solid #01d277 5px;
 }
 section[id=sidebar]>*{
-    padding: 10px;
+    padding-right: 15px;
 }
 
 section[id=sidebar]>div[class^='col-']{
     padding: 0;
     margin: 0;
 }
+.sidebar-container{
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-header{
+    color: #01d277;
+    font-weight: 700;
+}
 
 .sidebar-title{
     border-bottom: solid #081c24 3px;
     font-weight: 900;
+    padding-left: 10px;
 }
 .sidebar-description{
     margin-top: 10px;
@@ -211,6 +241,7 @@ section[id=sidebar]>div[class^='col-']{
 }
 
 .sidebar-poster{
+    height: 50vh;
     width: auto;
     margin-left: auto !important;
     margin-right: auto !important;
