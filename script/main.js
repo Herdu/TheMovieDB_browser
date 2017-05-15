@@ -43,6 +43,11 @@ var displayMoreInfo = function(movie){
 
 
 
+    $('.sidebar-description').css("display","block");
+    $('.sidebar-category').css("display","block");
+    $('.sidebar-imbd-container').css("display","block");
+    $('.sidebar-companies').css("display","block");
+    $('.sidebar-countries').css("display","block");
 
     if (movie.poster_path != null)
         var posterUrl = configuration.images.base_url+configuration.images.poster_sizes[posterSize+3]+movie.poster_path;
@@ -129,11 +134,6 @@ var displayMoreInfo = function(movie){
         $('.sidebar-countries').html("<strong class='sidebar-header'>"+str+" powstania: </strong>"+countriesString);
     }
 
-    $('.sidebar-description').css("display","block");
-    $('.sidebar-category').css("display","block");
-    $('.sidebar-imbd-container').css("display","block");
-    $('.sidebar-companies').css("display","block");
-    $('.sidebar-countries').css("display","block");
 
 };
 
@@ -142,6 +142,9 @@ var displayMoreInfo = function(movie){
 
 
 var hideSideBar = function(){
+
+
+    $('.sidebar-poster').attr("src", "");
 
     $('#movies').unbind().removeClass("shadow");
     $( "#sidebar" ).stop().animate({
